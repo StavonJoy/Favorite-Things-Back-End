@@ -7,8 +7,8 @@ const cors = require('cors');
 require("dotenv").config();
 require("./config/database");
 
-const userRouter = require("./routes/users");
 const authRouter = require("./routes/auth");
+const userRouter = require("./routes/users");
 const listRouter = require('./routes/lists')
 
 app.use(cors());
@@ -18,6 +18,7 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, "build")));
 
 app.use("/api/auth", authRouter);
+app.use(require('./config/auth'))
 app.use("/api/users", userRouter);
 app.use('/api/lists', listRouter);
 
