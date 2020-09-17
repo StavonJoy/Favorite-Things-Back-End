@@ -15,6 +15,7 @@ async function index(req, res) {
 }
 
 async function create(req, res) {
+    req.body.addedBy = req.user._id
     const list = await List.create(req.body);
     res.status(201).json(list);
 }

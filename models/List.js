@@ -6,7 +6,8 @@ const listSchema = new Schema({
     image: String,
     item1: String,
     item2: String,
-    item3: String
+    item3: String,
+    addedBy: String
 }, {
     timestamps: true
 })
