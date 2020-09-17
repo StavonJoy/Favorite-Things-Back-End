@@ -10,8 +10,6 @@ require("./config/database");
 const userRouter = require("./routes/users");
 const authRouter = require("./routes/auth");
 
-const cors = require("cors");
-
 app.use(cors());
 app.use(logger("dev"));
 app.use(express.json());

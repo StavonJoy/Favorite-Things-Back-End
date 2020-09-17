@@ -15,6 +15,7 @@ async function signup(req, res) {
     res.json({ token });
   } catch (err) {
     res.status(400).send({ err: err.errmsg });
+    console.log(err)
   }
 }
 
