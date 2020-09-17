@@ -9,6 +9,7 @@ require("./config/database");
 
 const userRouter = require("./routes/users");
 const authRouter = require("./routes/auth");
+const listRouter = require('./routes/lists')
 
 app.use(cors());
 app.use(logger("dev"));
@@ -18,6 +19,7 @@ app.use(express.static(path.join(__dirname, "build")));
 
 app.use("/api/auth", authRouter);
 app.use("/api/users", userRouter);
+app.use('/api/lists', listRouter);
 
 app.get("/*", function (req, res) {
   res.sendFile(path.join(__dirname, "build", "index.html"));

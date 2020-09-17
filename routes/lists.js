@@ -1,5 +1,6 @@
-const List = require('../../models/List')
-const listCtrl = require('../../controllers/lists')
+const router = require('express').Router();
+// const List = require('../models/List')
+const listsCtrl = require('../controllers/api/lists')
 
 router.get('/', listsCtrl.index);
 router.post('/', listsCtrl.create);
