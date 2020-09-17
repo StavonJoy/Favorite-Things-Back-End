@@ -3,6 +3,10 @@ const Schema = mongoose.Schema;
 
 const listSchema = new Schema({
     name: String,   
+    image: String,
+    item1: String,
+    item2: String,
+    item3: String
 }, {
     timestamps: true
 })
